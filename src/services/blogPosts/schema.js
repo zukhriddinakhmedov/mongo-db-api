@@ -2,7 +2,7 @@ import mongoose from "mongoose"
 
 const { Schema, model } = mongoose
 
-const userSchema = new Schema(
+const blogPostSchema = new Schema(
     {
         category: { type: String, required: true },
         title: { type: String, required: true },
@@ -21,3 +21,5 @@ const userSchema = new Schema(
         timestamps: true, // adds createdAt and updatedAt automatically 
     }
 )
+
+export default model("blogPost", blogPostSchema)
